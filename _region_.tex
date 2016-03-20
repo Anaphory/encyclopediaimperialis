@@ -1,0 +1,90 @@
+\message{ !name(encyclopedia.tex)}\documentclass[twoside,11pt,b5paper,twocolumn]{scrbook}
+\usepackage{fontspec} % To use a beautiful font
+\defaultfontfeatures{RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp,+swsh},%
+  Numbers={Proportional,OldStyle},%
+  SmallCapsFeatures={RawFeature={+smcp}},}
+
+
+\usepackage[hidelinks]{hyperref} % check and put cross-references
+\usepackage[british]{babel} % hyphenation
+\usepackage{xcolor} % have colors
+\usepackage{longtable}
+\definecolor{marron}{RGB}{60,30,10}
+\definecolor{darkblue}{RGB}{0,0,80}
+\definecolor{lightblue}{RGB}{80,80,80}
+\definecolor{darkgreen}{RGB}{0,80,0}
+\definecolor{lightgreen}{RGB}{10,100,20}
+\definecolor{darkgray}{RGB}{0,80,0}
+\definecolor{darkred}{RGB}{80,0,0}
+\definecolor{shadecolor}{rgb}{0.97,0.97,0.97}
+
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{scrlayer-scrpage} % have fancy headers and footers
+\usepackage{lettrine} % For dopped capitals
+\usepackage{dblfloatfix} % for specifying two-column table placement
+\usepackage{fixltx2e} % for fixing two-column table placement
+\usepackage[tmargin=2cm, bmargin=3cm,
+lmargin=3cm, rmargin=1.5cm,
+headheight=1.0cm,
+headsep=0.4cm, footskip=1.5cm]{geometry}
+
+
+\usepackage[final,stretch=10,protrusion=true,expansion=true]{microtype}
+\microtypecontext{spacing=nonfrench}
+
+\setmainfont[SmallCapsFont={EB Garamond}]{EB Garamond}
+\setkomafont{disposition}{\rmfamily}
+
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+
+
+\usepackage{fourier-orns}
+
+\newcommand{\ornamento}{\vspace{2em}\noindent \textcolor{darkgray}{\hrulefill~ \raisebox{-2.5pt}[10pt][10pt]{\leafright \decofourleft \decothreeleft \aldineright \decotwo \floweroneleft \decoone \floweroneright \decotwo \aldineleft\decothreeright \decofourright \leafleft} ~ \hrulefill \\ \vspace{2em}}}
+\newcommand{\ornpar}{\noindent \textcolor{darkgray}{ \raisebox{-1.9pt}[10pt][10pt]{\leafright} \hrulefill \raisebox{-1.9pt}[10pt][10pt]{\leafright \decofourleft \decothreeleft \aldineright \decotwo \floweroneleft \decoone}}}
+\newcommand{\ornimpar}{\textcolor{darkgray}{\raisebox{-1.9pt}[10pt][10pt]{\decoone \floweroneright \decotwo \aldineleft \decothreeright \decofourright \leafleft} \hrulefill \raisebox{-1.9pt}[10pt][10pt]{\leafleft}}}
+
+\makeatletter
+\def\headrule{{\color{darkgray}\raisebox{-2.1pt}[10pt][10pt]{\leafright} \hrulefill \raisebox{-2.1pt}[10pt][10pt]{~~~\decofourleft \decotwo\decofourright~~~} \hrulefill \raisebox{-2.1pt}[10pt][10pt]{ \leafleft}}}
+\makeatother
+
+\newcommand{\estcab}[1]{\textsc{\textcolor{marron}{#1}}}
+
+\renewcommand{\chaptermark}[1]{}
+\renewcommand{\sectionmark}[1]{}
+\lohead{\estcab{\rightmark}}
+\rohead{\estcab{\leftmark}}
+\lehead{\estcab{\rightmark}}
+\rehead{\estcab{\leftmark}}
+
+\ofoot{}
+\lofoot{\ornimpar \\ \large \hfill \textcolor{darkgray}{\leafNE ~~~ \textrm{\thepage}}}
+\refoot{\ornpar \\ \large \textcolor{darkgray}{\textrm{\thepage} ~~~ \reflectbox{\leafNE}} \hfill}
+
+\newcommand{\keyword}[1]{\textcolor{darkgreen}{#1}}
+\renewcommand{\paragraph}[1]{\par\noindent\markboth{#1}{#1}\estcab{\keyword{#1}}\label{#1} }
+\newcommand{\see}[1]{{\estcab{\hyperref[#1]{#1}}}}
+\newcommand{\proverb}[1]{\par \textcolor{darkblue}{\itshape #1}}
+
+\pagestyle{scrheadings}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\begin{document}
+
+\message{ !name(lemma.tex) !offset(201) }
+
+\message{ !name(encyclopedia.tex) !offset(55) }
+
+\end{document}
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: "encyclopedia"
+%%% End: 
