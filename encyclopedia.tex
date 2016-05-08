@@ -64,9 +64,14 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
 
 \ofoot{}
 \lofoot{\ornodd \\ \large \hfill \textcolor{darkgray}{%
-    \
-    ~~~ \textrm{\thepage}}}
-\refoot{\orneven \\ \large \textcolor{darkgray}{\textrm{\thepage} ~~~ \reflectbox{\leafNE}} \hfill}
+    {\fontspec{IM FELL FLOWERS 2} K}%
+    ~~~ \textrm{\thepage}}%
+}
+\refoot{\orneven \\ \large \textcolor{darkgray}{%
+    \textrm{\thepage} ~~~%
+    {\fontspec{IM FELL FLOWERS 2} J}}%
+  \hfill%
+}
 
 \newcommand{\keyword}[1]{%
   \textcolor{darkgreen}{\expandafter\MakeUppercase{#1}}%
@@ -92,12 +97,17 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
     \noindent%
     \markboth{#1}{#1}%
     {\addfontfeature{LetterSpace=20}\Large{\keyword{#1.}}}\label{#1}%
-  \end{center}\begin{multicols}{2}%
+  \end{center}\nopagebreak\begin{multicols}{2}%
   \noindent%
-  \let\localpar\normalindentpar
+  \let\localpar\normalindentpar%
   \renewcommand{\endarticle}{\bigparagraphendtwiddle}%
 }
-\newcommand{\bigparagraphendtwiddle}{\end{multicols}\medskip\begin{multicols}{2}}
+\newcommand{\bigparagraphendtwiddle}{%
+  \hfill{\fontspec{IM FELL FLOWERS 2} a}%
+  \end{multicols}%
+  \medskip%
+  \begin{multicols}{2}
+}
 \newcommand{\s}[1]{{\textsc{\textcolor{marron}{\hyperref[#1]{#1}}}}}
 \newcommand{\see}[1]{See {\textsc{\textcolor{marron}{\hyperref[#1]{#1}}}}, p. \pageref{#1}}
 
@@ -167,11 +177,11 @@ Second edition, 380 YE.
 \chapter{some useful rituals}
 \label{appendix}
 while imperial lore contains a great number of different rituals in all the different realms, even a landskeeper not practicing the magickal arts themself should be aware of some useful rituals, and at least roughly ken what is necessary to enact them.
-\paragraph{strong ox, golden sun} summer \see{magnitude} 4. This ritual targets a farm which must already be enchanted with the blessing of new spring ritual. The character who controls the target personal resource must be present throughout. This ritual completely replaces the effect of blessing of new spring. The target farm earns an additional 50 rings at the summer solstice and the autumn equinox. The ritual ends at the start of winter. This ritual is intended to be cast at the spring equinox. If the spell is cast later in the year, then money that would have been gained in earlier seasons is lost. It is useless if performed after the summer solstice. This ritual can affect additional farms in the same territory. Each additional farm increases the magnitude by 2.
-\paragraph{blessing of new spring} spring \see{magnitude} 2 this ritual targets a farm. The character who controls the target personal resource must be present throughout. This ritual is an enchantment. A target may only be under one enchantment effect at a time. The farm earns an additional 10 rings at the spring equinox, the summer solstice and the autumn equinox. The ritual ends at the start of winter. This spell is intended to be cast at the winter solstice. If the spell is cast later in the year, then money that would have been gained in earlier seasons is lost. It is useless if performed after the summer solstice. This ritual can affect additional farms in the same territory. Each additional farm increases the magnitude by 1.
-\paragraph{gathering the harvest} autumn \see{magnitude} 15. This ritual targets a farm which must already be enchanted with the strong ox, golden sun ritual. The character who controls the target personal resource must be present throughout. This ritual completely replaces the effect of strong ox, golden sun. The farm earns an additional 400 rings at the autumn equinox. The ritual ends at the start of winter. This ritual is intended to be cast at the summer solstice. If the spell is cast earlier in the year, then money that would have been gained from strong ox, golden sun or blessing of new spring is lost. The effect lasts until the start of the next summit. If the owner of the resource does not attend the next event, then the additional production provided by the resource is still added to that character's inventory. This ritual can affect additional farms in the same territory. Each additional farm increases the magnitude by 12.
-\paragraph{bright lantern of ophis} day \see{magnitude} 6 the ritual reveals information about an enchantment, \see{curse} or other magickal effect. It is most often used on a character or item that is present. It can also be used on a special effect that is anchored to an area. It determines the realm and magnitude of the effect; it determines what the effect does, and provides details of how it works; it reveals any remaining duration; it reveals any conditional effects, or any special methods that exist for removing the effect; it may provide information about where the magickal effect has come from (a ritual or the supernatural abilities of an \see{eternal}, for example). you may increase the magnitude of the ritual to penetrate more powerful shrouds or masks.
-\paragraph{circle of gold} autumn \see{magnitude} 9 this ritual targets up to five characters from the same band. Each character must be present throughout. The target characters gain the ability to use stay with me once without needing to ken the skill or spend any hero points; however, they can only use the ability on another character who was also a target of this ritual. They feel a desire to stick together, whether on the battlefield or off it. They feel a strong urge to defend the other targets of the ritual, whether from physical harm or from insults. The effect lasts until the end of the next \see{battle}, skirmish or quest the character participates in; or until the end of the current event, whichever is sooner. This ritual can affect additional characters from the same band. Every two additional characters increases the magnitude by 3. Additional characters must be present throughout. Any caster who has mastered the ritual may choose to substitute weltsilver for crystal mana when contributing to it. Every 2 ingots of weltsilver spent counts as 1 crystal mana when contributing to the ritual.
+\paragraph{strong ox, golden sun} summer \s{magnitude} 4. This ritual targets a farm which must already be enchanted with the blessing of new spring ritual. The character who controls the target personal resource must be present throughout. This ritual completely replaces the effect of blessing of new spring. The target farm earns an additional 50 rings at the summer solstice and the autumn equinox. The ritual ends at the start of winter. This ritual is intended to be cast at the spring equinox. If the spell is cast later in the year, then money that would have been gained in earlier seasons is lost. It is useless if performed after the summer solstice. This ritual can affect additional farms in the same territory. Each additional farm increases the magnitude by 2.
+\paragraph{blessing of new spring} spring \s{magnitude} 2 this ritual targets a farm. The character who controls the target personal resource must be present throughout. This ritual is an enchantment. A target may only be under one enchantment effect at a time. The farm earns an additional 10 rings at the spring equinox, the summer solstice and the autumn equinox. The ritual ends at the start of winter. This spell is intended to be cast at the winter solstice. If the spell is cast later in the year, then money that would have been gained in earlier seasons is lost. It is useless if performed after the summer solstice. This ritual can affect additional farms in the same territory. Each additional farm increases the magnitude by 1.
+\paragraph{gathering the harvest} autumn \s{magnitude} 15. This ritual targets a farm which must already be enchanted with the strong ox, golden sun ritual. The character who controls the target personal resource must be present throughout. This ritual completely replaces the effect of strong ox, golden sun. The farm earns an additional 400 rings at the autumn equinox. The ritual ends at the start of winter. This ritual is intended to be cast at the summer solstice. If the spell is cast earlier in the year, then money that would have been gained from strong ox, golden sun or blessing of new spring is lost. The effect lasts until the start of the next summit. If the owner of the resource does not attend the next event, then the additional production provided by the resource is still added to that character's inventory. This ritual can affect additional farms in the same territory. Each additional farm increases the magnitude by 12.
+\paragraph{bright lantern of ophis} day \s{magnitude} 6 the ritual reveals information about an enchantment, \s{curse} or other magickal effect. It is most often used on a character or item that is present. It can also be used on a special effect that is anchored to an area. It determines the realm and magnitude of the effect; it determines what the effect does, and provides details of how it works; it reveals any remaining duration; it reveals any conditional effects, or any special methods that exist for removing the effect; it may provide information about where the magickal effect has come from (a ritual or the supernatural abilities of an \s{eternal}, for example). you may increase the magnitude of the ritual to penetrate more powerful shrouds or masks.
+\paragraph{circle of gold} autumn \s{magnitude} 9 this ritual targets up to five characters from the same band. Each character must be present throughout. The target characters gain the ability to use stay with me once without needing to ken the skill or spend any hero points; however, they can only use the ability on another character who was also a target of this ritual. They feel a desire to stick together, whether on the battlefield or off it. They feel a strong urge to defend the other targets of the ritual, whether from physical harm or from insults. The effect lasts until the end of the next \s{battle}, skirmish or quest the character participates in; or until the end of the current event, whichever is sooner. This ritual can affect additional characters from the same band. Every two additional characters increases the magnitude by 3. Additional characters must be present throughout. Any caster who has mastered the ritual may choose to substitute weltsilver for crystal mana when contributing to it. Every 2 ingots of weltsilver spent counts as 1 crystal mana when contributing to the ritual.
 
 \chapter{exemplary stories from the Marches}
 \label{stories}
