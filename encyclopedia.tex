@@ -80,6 +80,8 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
 \newcommand{\moreindentpar}{\par\hangindent=1em\setlength{\parindent}{2em}}
 \newcommand{\normalindentpar}{\par\setlength{\parindent}{1em}}
 
+\newcommand{\endarticle}{}
+
 \renewcommand{\paragraph}[1]{%
   \endarticle%
   \par\hangindent=1em\noindent%
@@ -88,8 +90,6 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
   {\keyword{#1}}\label{#1}%
   \renewcommand{\endarticle}{}
 }
-
-\newcommand{\endarticle}{}
 
 \newcommand{\bigparagraph}[1]{%
   \endarticle%
