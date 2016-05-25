@@ -74,12 +74,12 @@
      id="namedview123"
      showgrid="false"
      inkscape:zoom="2.0982951"
-     inkscape:cx="621.03088"
-     inkscape:cy="220.38521"
+     inkscape:cx="327.47235"
+     inkscape:cy="222.23714"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      units="mm"
      borderlayer="true"
      fit-margin-top="0"
@@ -291,6 +291,11 @@
        id="path4842"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 382.06869,464.68823 -1.0531,-5.43399 2.14832,-1.64283 7.49806,-1.05309 1.55858,2.99079 -0.75823,4.29664 z"
+       id="path4399"
+       inkscape:connector-curvature="0" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1464,6 +1469,22 @@
            x="264.22543"
            sodipodi:role="line"
            id="tspan4554">the Hill</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.1667614,0,0,1.1726995,73.196085,-95.218461)"
+       id="use4317-4-4"
+       style="display:inline;fill:none;stroke:none;stroke-linecap:square;stroke-miterlimit:10">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.51294035;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 258.34005,308.31907 c 1.83491,-0.10287 3.6756,-0.21695 5.52068,-0.17669 2.51757,-0.46707 5.2157,-0.42208 7.78518,-0.15019 0.78353,0.0698 1.57383,0.0709 2.36029,0.0281"
+         id="path4395"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.51294035;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="m 265.65949,307.76333 0.0493,-3.90446 1.53388,-1.65662 0.93289,1.49422 0.0703,1.09276 1.83318,0.15603 1.14958,1.19285 -0.0675,1.55465"
+         id="path4397"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccc" />
     </g>
   </g>
 </svg>
