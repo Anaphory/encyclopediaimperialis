@@ -1,7 +1,7 @@
 \documentclass[twoside,11pt,b5paper]{scrbook}
 \usepackage{fontspec} % To use a beautiful font
 \defaultfontfeatures{RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp,+swsh},%
-  Numbers={Proportional,OldStyle},%
+%  Numbers={Proportional,OldStyle},%
   SmallCapsFeatures={RawFeature={+smcp}},}
 
 \usepackage{multicol}
@@ -12,9 +12,8 @@
 \definecolor{marron}{RGB}{60,30,10}
 \definecolor{darkblue}{RGB}{0,0,80}
 \definecolor{lightblue}{RGB}{80,80,80}
-\definecolor{darkgreen}{RGB}{0,80,0}
 \definecolor{lightgreen}{RGB}{10,100,20}
-\definecolor{darkgray}{RGB}{0,80,0}
+\definecolor{darkgreen}{RGB}{0,80,0}
 \definecolor{darkred}{RGB}{80,0,0}
 \definecolor{shadecolor}{rgb}{0.97,0.97,0.97}
 
@@ -41,18 +40,10 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
 \setkomafont{disposition}{\rmfamily}
 
 \setlength{\parskip}{0.5ex plus 0.1ex minus 0.1ex}
+\setlength{\footheight}{36.0pt}
 
-\usepackage{fourier-orns}
-\newcommand{\leafright}{\Large\fontspec{IM FELL FLOWERS 2}a}
-\newcommand{\leafleft}{\Large\fontspec{IM FELL FLOWERS 2}A}
-
-\newcommand{\ornamento}{\vspace{2em}\noindent \textcolor{darkgray}{\hrulefill~ \raisebox{-2.5pt}[10pt][10pt]{\leafright \decofourleft \decothreeleft \aldineright \decotwo \floweroneleft \decoone \floweroneright \decotwo \aldineleft\decothreeright \decofourright \leafleft} ~ \hrulefill \\ \vspace{2em}}}
-\newcommand{\orneven}{\noindent \textcolor{darkgray}{ \raisebox{-1.9pt}[10pt][10pt]{\leafright} \hrulefill \raisebox{-1.9pt}[10pt][10pt]{\leafright \decofourleft \decothreeleft \aldineright \decotwo \floweroneleft \decoone}}}
-\newcommand{\ornodd}{\textcolor{darkgray}{\raisebox{-1.9pt}[10pt][10pt]{\decoone \floweroneright \decotwo \aldineleft \decothreeright \decofourright \leafleft} \hrulefill \raisebox{-1.9pt}[10pt][10pt]{\leafleft}}}
-
-\makeatletter
-\def\headrule{{\color{darkgray}\raisebox{-2.1pt}[10pt][10pt]{\leafright} \hrulefill \raisebox{-2.1pt}[10pt][10pt]{~~~\decofourleft \decotwo\decofourright~~~} \hrulefill \raisebox{-2.1pt}[10pt][10pt]{ \leafleft}}}
-\makeatother
+\newcommand{\orneven}{\noindent \textcolor{darkgreen}{ \raisebox{-0.5pt}[10pt][10pt]{\fontspec{IM FELL FLOWERS 2}M} \hrulefill \raisebox{-0.5pt}[10pt][10pt]{\fontspec{IM FELL FLOWERS 2}WJN}}}
+\newcommand{\ornodd}{\textcolor{darkgreen}{\raisebox{-0.5pt}[10pt][10pt]{\fontspec{IM FELL FLOWERS 2}NMW} \hrulefill \raisebox{-0.5pt}[10pt][10pt]{\fontspec{IM FELL FLOWERS 2}J}}}
 
 \newcommand{\keywordformat}[1]{\textsc{\textcolor{marron}{#1}}}
 \renewcommand{\chaptermark}[1]{}
@@ -63,11 +54,11 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
 \rehead{\keywordformat{\leftmark}}
 
 \ofoot{}
-\lofoot{\ornodd \\ \large \hfill \textcolor{darkgray}{%
+\lofoot{\ornodd \\ \large \hfill \textcolor{darkgreen}{%
     {\fontspec{IM FELL FLOWERS 2} K}%
     ~~~ \textrm{\thepage}}%
 }
-\refoot{\orneven \\ \large \textcolor{darkgray}{%
+\refoot{\orneven \\ \large \textcolor{darkgreen}{%
     \textrm{\thepage} ~~~%
     {\fontspec{IM FELL FLOWERS 2} J}}%
   \hfill%
@@ -80,7 +71,8 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
 \newcommand{\moreindentpar}{\par\hangindent=1em\setlength{\parindent}{2em}}
 \newcommand{\normalindentpar}{\par\setlength{\parindent}{1em}}
 
-\newcommand{\endarticle}{}
+\newcommand{\noop}{}
+\let\endarticle\noop
 
 \renewcommand{\paragraph}[1]{%
   \endarticle%
@@ -157,7 +149,7 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
  {\scshape Anno CCCLXXX}
 \end{titlepage}
 \begin{uppertitleback}{}
-Contributions by James Appleseeder of Pickham, Abbot; the late Peter Keeper, Cardinal and Lands\-keeper; Nicholas Reaper, Lands\-keeper; Martin Orchards, Monk; the late Annis Ramsbruck, Bard; Reinholz, Magistrate; and other members of the Imperial Civil Service.
+Contributions by James Appleseeder of Pickham, Friar and former Abbot; the late Peter Keeper, Cardinal and Lands\-keeper; Nicholas Reaper, Lands\-keeper; Martin Orchards, Monk; the late Annis Ramsbruck, Bard; Hattie Brewcup, Apothecary; Robyn of Swindale, Friar; Reinholz, Magistrate, and other members of the Imperial Civil Service.
 
 This book was written with the intention to provide Wise and Vigilant ken, and to be an initial resource for any landskeeper looking to solve problems outside their field of expertise. Therefore, further contributions and any fundamental questions left unanswered are welcome.
 
@@ -190,6 +182,6 @@ while imperial lore contains a great number of different rituals in all the diff
 %%% Local Variables: 
 %%% coding: utf-8
 %%% mode: latex
-%%% TeX-engine: xetex
+%%% TeX-engine: luatex
 %%% TeX-master: "encyclopedia"
 %%% End: 
