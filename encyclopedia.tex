@@ -1,4 +1,4 @@
-\documentclass[twoside,11pt,b5paper]{scrbook}
+\documentclass[twoside,9pt,a5paper]{scrbook}
 \usepackage{fontspec} % To use a beautiful font
 \defaultfontfeatures{RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp,+swsh},%
 %  Numbers={Proportional,OldStyle},%
@@ -25,10 +25,10 @@
 \usepackage{lettrine} % For dopped capitals
 \usepackage{dblfloatfix} % for specifying two-column table placement
 \usepackage{fixltx2e} % for fixing two-column table placement
-\usepackage[tmargin=2cm, bmargin=3cm,
-lmargin=3cm, rmargin=1.5cm,
-headheight=1.0cm,
-headsep=0.4cm, footskip=1.5cm]{geometry}
+\usepackage[tmargin=1.68cm, bmargin=2.52cm,
+lmargin=2.52cm, rmargin=1.26cm,
+headheight=0.84cm,
+headsep=0.336cm, footskip=1.26cm]{geometry}
 
 \hyphenation{the Mar-ches Mar-ches Bea-ter con-sti-tu-tion Grey-wa-ter con-sti-tu-tion-al foun-da-tion}
 
@@ -88,9 +88,9 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
   \end{multicols}\begin{center}
     \noindent%
     \markboth{#1}{#1}%
-    {\addfontfeature{LetterSpace=20}\Large{\keyword{#1.}}}\label{#1}%
+    {\addfontfeature{LetterSpace=10}\Large{\keyword{#1.}}}\label{#1}\nopagebreak%
   \end{center}\nopagebreak\begin{multicols}{2}%
-  \noindent%
+  \nopagebreak\noindent%
   \let\localpar\normalindentpar%
   \renewcommand{\endarticle}{\bigparagraphendtwiddle}%
 }
@@ -109,19 +109,20 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
   \end{center}%
 }
 
-\pagestyle{scrheadings}
 
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 
 \begin{document}
+\pagenumbering{roman}
+\pagestyle{plain}
 
 \begin{titlepage}
  \centering
  \vspace*{\baselineskip}
- \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
- \rule{\textwidth}{0.4pt}\\[\baselineskip]
+ \rule{\textwidth}{1.4pt}\vspace*{-\baselineskip}\vspace*{2pt}
+ \rule{\textwidth}{0.3pt}\\[\baselineskip]
  
  {\Huge \itshape Encyclopædia Imperialys;}\\[0.4em]
  {\Large Or,\\[0.4em]}
@@ -139,7 +140,7 @@ headsep=0.4cm, footskip=1.5cm]{geometry}
  
  \vfill
  
- \includegraphics[height=6cm]{encyclopedia/Sular.pdf}
+ \includegraphics[height=5cm]{encyclopedia/Sular.pdf}
 
  \vfill
 
@@ -159,14 +160,22 @@ Second edition, 380 YE.
 \end{uppertitleback}
 \setlength{\parindent}{1em}
 
+\begingroup
+\tableofcontents
+\let\cleardoublepage\clearpage
 \listoftables
+\endgroup
 
 \chapter{terms and essayes}
+\pagestyle{scrheadings}
+\thispagestyle{scrheadings}
+\pagenumbering{arabic}
 \begin{multicols}{2}
 \input{lemma}
 \end{multicols}
 
 \chapter{some useful rituals}
+\thispagestyle{scrheadings}
 \label{appendix}
 While imperial lore contains a great number of different rituals in all the different realms, even a landskeeper not practicing the magickal arts themself should be aware of some useful rituals, and at least roughly ken what is necessary to enact them.
 \paragraph{blessing of new spring} spring \s{magnitude} 2. This ritual targets a farm. The yeoman who owns the farm must be present througout. The power of this ritual infuses animals and plants with vigour and fertility. Crops grow quickly, and in great abundance; they are naturally healthy and resistant to threats such as harsh weather, frost, disease and parasites. Animals are fruitful, with large litters, and young creatures grow quickly and enjoy great health. If there is a downside to the ritual it is that it increases the amount of work that must be done - crops must constantly be tended for weeds, and animals become a little more restive as they become more fruitful. 
@@ -222,8 +231,10 @@ In addition, while the enchantment lasts (until the end of their next
 battle, skirmish or quest, but at most a few days), the targets feel a
 desire to stick together, fighting alongside each other and with the
 character who trained them in their new combat skill.
+\markboth{}{}
 
 \chapter{exemplary stories from the Marches}
+\thispagestyle{scrheadings}
 \label{stories}
 \input{stories}
 \end{document}
