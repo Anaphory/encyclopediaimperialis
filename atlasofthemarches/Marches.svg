@@ -38,6 +38,63 @@
   <defs
      id="defs125">
     <inkscape:path-effect
+       effect="interpolate"
+       id="path-effect6179"
+       is_visible="true"
+       trajectory="M 0,0 0,0"
+       equidistant_spacing="true"
+       steps="5" />
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect6177"
+       is_visible="true"
+       bendpath="m 2.995822,1094.313 c 327.521948,69.0418 486.377668,60.2377 533.793908,0"
+       prop_scale="1"
+       scale_y_rel="false"
+       vertical="false"
+       bendpath-nodetypes="cc" />
+    <inkscape:path-effect
+       effect="envelope"
+       id="path-effect6173"
+       is_visible="true"
+       yy="true"
+       xx="true"
+       bendpath1="m 671.93341,51.38664 244.4794,0"
+       bendpath2="m 916.41281,51.38664 0,231.111"
+       bendpath3="m 671.93341,282.49764 244.4794,0"
+       bendpath4="m 671.93341,51.38664 0,231.111" />
+    <inkscape:path-effect
+       effect="clone_original"
+       id="path-effect6171"
+       is_visible="true"
+       linkedpath="" />
+    <inkscape:path-effect
+       effect="construct_grid"
+       id="path-effect6169"
+       is_visible="true"
+       nr_x="5"
+       nr_y="5" />
+    <inkscape:path-effect
+       effect="knot"
+       id="path-effect6144"
+       is_visible="true"
+       interruption_width="3"
+       prop_to_stroke_width="true"
+       add_stroke_width="true"
+       add_other_stroke_width="true"
+       switcher_size="15"
+       crossing_points_vector="" />
+    <inkscape:path-effect
+       effect="clone_original"
+       id="path-effect6142"
+       is_visible="true"
+       linkedpath="" />
+    <inkscape:path-effect
+       effect="clone_original"
+       id="path-effect6140"
+       is_visible="true"
+       linkedpath="" />
+    <inkscape:path-effect
        effect="skeletal"
        id="path-effect6741"
        is_visible="true"
@@ -59,6 +116,16 @@
          inkscape:connector-curvature="0"
          style="clip-rule:nonzero" />
     </clipPath>
+    <inkscape:path-effect
+       effect="clone_original"
+       id="path-effect6140-4"
+       is_visible="true"
+       linkedpath="" />
+    <inkscape:path-effect
+       effect="clone_original"
+       id="path-effect6142-1"
+       is_visible="true"
+       linkedpath="" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -74,12 +141,12 @@
      id="namedview123"
      showgrid="false"
      inkscape:zoom="2.0982951"
-     inkscape:cx="327.47235"
-     inkscape:cy="222.23714"
+     inkscape:cx="570.70686"
+     inkscape:cy="206.42728"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer3"
      units="mm"
      borderlayer="true"
      fit-margin-top="0"
@@ -532,7 +599,10 @@
        y="-437.1181"
        id="text4319"
        sodipodi:linespacing="125%"
-       transform="matrix(0.72612129,0.68756663,-0.68756663,0.72612129,0,0)"><tspan
+       transform="matrix(0.72612129,0.68756663,-0.68756663,0.72612129,0,0)"
+       inkscape:export-filename="/home/gereon/games/Empire-Marches/CorpseRoad.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
          sodipodi:role="line"
          id="tspan4321"
          x="831.05048"
@@ -718,7 +788,7 @@
     <g
        id="g4501"
        style="display:inline"
-       transform="translate(343.30907,-72.3851)">
+       transform="translate(365.61241,-85.354298)">
       <g
          style="display:inline"
          id="g4503"
@@ -826,7 +896,10 @@
     <g
        transform="translate(542.51842,66.298919)"
        style="display:inline"
-       id="g4541">
+       id="g4541"
+       inkscape:export-filename="/home/gereon/games/Empire-Marches/CorpseRoad.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
       <g
          transform="matrix(0.76993947,0,0,0.76181708,119.18957,25.430486)"
          id="g4543"
@@ -1364,7 +1437,10 @@
     <g
        style="display:inline;fill:none;stroke:none;stroke-linecap:square;stroke-miterlimit:10"
        id="g4569"
-       transform="matrix(0.76993947,0,0,0.76181708,673.01896,-8.760931)">
+       transform="matrix(0.76993947,0,0,0.76181708,673.01896,-8.760931)"
+       inkscape:export-filename="/home/gereon/games/Empire-Marches/CorpseRoad.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
       <g
          id="g4571">
         <path
